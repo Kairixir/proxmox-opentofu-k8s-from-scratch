@@ -1,6 +1,6 @@
-# Learning repo for bootstrapping Proxmox, OpenTofu, and k8s from ground up
+# Learning repo for setting up Proxmox, OpenTofu, and k8s from scratch
 
-Learning to bootstrap k8s using proxmox and opentofu
+Learning to setup k8s using proxmox and opentofu form scratch
 
 # Guidance
 
