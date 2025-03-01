@@ -1,3 +1,9 @@
+# Config secrets
 secrets*.tfvars
 
+# Local tofu files
 **/.terraform/providers/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
