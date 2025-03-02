@@ -15,3 +15,9 @@ variable "leader_node_port" {
   default     = null
   description = "Port for the leader node machine"
 }
+
+variable "proxmox_ssh_user" {
+  type        = string
+  default     = "tofu"
+  description = "Default user to control proxmox host with"
+}

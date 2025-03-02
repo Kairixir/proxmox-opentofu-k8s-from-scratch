@@ -50,7 +50,7 @@ resource "proxmox_virtual_environment_vm" "k8s-cp-vms-cl01" {
         gateway = "10.160.1.1"
       }
     }
-    datastore_id = "raid-10-node02"
+    datastore_id = "local-btrfs-vms"
 
     user_data_file_id = proxmox_virtual_environment_file.ubuntu_cloud_init.id
   }
@@ -128,7 +128,7 @@ resource "proxmox_virtual_environment_vm" "k8s-worker-vms-cl01" {
         gateway = "10.160.1.1"
       }
     }
-    datastore_id = "raid-10-node02"
+    datastore_id = "local-btrfs-vms"
 
     user_data_file_id = proxmox_virtual_environment_file.ubuntu_cloud_init.id
   }

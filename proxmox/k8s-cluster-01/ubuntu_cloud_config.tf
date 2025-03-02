@@ -20,7 +20,7 @@ users:
     groups: sudo
     shell: /bin/bash
     ssh-authorized-keys:
-      - ${trimspace("ssh-rsa <sha356> user@mail.com")}
+      - ${trimspace("ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINhQWkgjI0SC99fxM0WPtjVgHH1K8r+s5sYdCLLavlfr Medusa Dell Wyse Legito Workstation")}
     sudo: ALL=(ALL) NOPASSWD:ALL
 
 power_state:

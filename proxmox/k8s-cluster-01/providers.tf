@@ -13,7 +13,7 @@ provider "proxmox" {
   insecure  = true
   ssh {
     agent    = true
-    username = "kairixir"
+    username = var.proxmox_ssh_user
 
     node {
       name    = "medusa"
