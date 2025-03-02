@@ -14,5 +14,11 @@ provider "proxmox" {
   ssh {
     agent    = true
     username = "kairixir"
+
+    node {
+      name    = "medusa"
+      address = "192.168.2.110"
+      port    = var.leader_node_port
+    }
   }
 }
