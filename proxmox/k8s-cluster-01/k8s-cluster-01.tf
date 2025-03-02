@@ -29,8 +29,8 @@ resource "proxmox_virtual_environment_vm" "k8s-cp-vms-cl01" {
   }
 
   disk {
-    datastore_id = "local-btfs"
-    file_id      = "local:iso/jammy-server-cloudimg-amd64.img"
+    datastore_id = "local-btrfs-vms"
+    file_id      = "local-btrfs:iso/jammy-server-cloudimg-amd64.img"
     interface    = "virtio0"
     iothread     = true
     discard      = "on"
@@ -107,8 +107,8 @@ resource "proxmox_virtual_environment_vm" "k8s-worker-vms-cl01" {
   }
 
   disk {
-    datastore_id = "local-btrfs"
-    file_id      = "local:iso/jammy-server-cloudimg-amd64.img"
+    datastore_id = "local-btrfs-vms"
+    file_id      = "local-btrfs:iso/jammy-server-cloudimg-amd64.img"
     interface    = "virtio0"
     iothread     = true
     discard      = "on"
