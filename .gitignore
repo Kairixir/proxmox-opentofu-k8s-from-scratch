@@ -1,6 +1,12 @@
 # Config secrets
 secrets*.tfvars
 
+# Ignore
+**git-ignore*
+
+# Endpoint config
+**endpoint*.tfvars
+
 # Local tofu files
 **/.terraform/providers/*
 

@@ -5,20 +5,26 @@ terraform {
       version = "0.73.0"
     }
   }
+
+  required_version = ">= 1.7.5"
 }
 
 provider "proxmox" {
-  endpoint  = var.proxmox_api_endpoint
-  api_token = var.proxmox_api_token
-  insecure  = true
+  endpoint  = "https://${local.computed_nodes["medusa"].node_url}:${local.computed_nodes["medusa"].node_proxmox_port}"
+  api_token = local.computed_nodes["medusa"].node_api_token
+
+  insecure = true
   ssh {
     agent    = true
-    username = var.proxmox_ssh_user
+    username = local.computed_nodes["medusa"].node_ssh_user
 
-    node {
-      name    = "medusa"
-      address = "192.168.2.110"
-      port    = var.leader_node_port
+    dynamic "node" {
+      for_each = [for n in local.computed_nodes : n if n.node_enabled]
+      content {
+        name    = node.value["node_name"]
+        address = node.value["node_url"]
+        port    = node.value["node_ssh_port"]
+      }
     }
   }
 }
