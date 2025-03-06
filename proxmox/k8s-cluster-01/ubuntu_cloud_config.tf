@@ -23,12 +23,11 @@ users:
       - ${trimspace("ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINhQWkgjI0SC99fxM0WPtjVgHH1K8r+s5sYdCLLavlfr Medusa Dell Wyse Legito Workstation")}
     sudo: ALL=(ALL) NOPASSWD:ALL
 
-power_state:
-    delay: now
-    mode: reboot
-    message: Rebooting after cloud-init completion
-    condition: true
-
+ power_state:
+     delay: now
+     mode: reboot
+     message: Rebooting after cloud-init completion
+     condition: true
 EOF
 
     file_name = "ubuntu.cloud-config.yaml"

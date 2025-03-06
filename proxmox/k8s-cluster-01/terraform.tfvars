@@ -8,7 +8,7 @@ nodes = {
     node_name         = "medusa"
     node_enabled      = true
     node_ssh_user     = "tofu"
-    node_ssh_port     = 22967
+    node_ssh_port     = 22697
     node_proxmox_port = 8006
   }
 }

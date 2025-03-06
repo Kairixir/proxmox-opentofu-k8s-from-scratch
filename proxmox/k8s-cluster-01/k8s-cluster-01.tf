@@ -19,7 +19,7 @@ resource "proxmox_virtual_environment_vm" "k8s-cp-vms-cl01" {
 
   agent {
     # read 'Qemu guest agent' section, change to true only when ready
-    enabled = true
+    enabled = false
   }
 
   startup {
@@ -66,11 +66,11 @@ resource "proxmox_virtual_environment_vm" "k8s-cp-vms-cl01" {
 
   keyboard_layout = "no"
 
-  # lifecycle {
-  #   ignore_changes = [
-  #     network_device,
-  #   ]
-  # }
+  lifecycle {
+    ignore_changes = [
+      network_device
+    ]
+  }
 
 
 }
@@ -144,11 +144,11 @@ resource "proxmox_virtual_environment_vm" "k8s-worker-vms-cl01" {
 
   keyboard_layout = "no"
 
-  # lifecycle {
-  #   ignore_changes = [
-  #     network_device,
-  #   ]
-  # }
+  lifecycle {
+    ignore_changes = [
+      network_device
+    ]
+  }
 
 
 }
