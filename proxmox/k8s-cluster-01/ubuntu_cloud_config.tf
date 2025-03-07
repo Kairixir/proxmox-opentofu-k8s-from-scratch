@@ -1,6 +1,6 @@
 resource "proxmox_virtual_environment_file" "ubuntu_cloud_init" {
   content_type = "snippets"
-  datastore_id = "local-btrfs"
+  datastore_id = "local-btrfs-vms"
   node_name    = "medusa"
 
   source_raw {
@@ -12,11 +12,13 @@ chpasswd:
   expire: false
 packages:
   - qemu-guest-agent
-timezone: Europe/Oslo
+timezone: Europe/Prague
 
 users:
   - default
   - name: ubuntu
+    password: ${trimspace("letmein")}
+    type: text
     groups: sudo
     shell: /bin/bash
     ssh-authorized-keys:
