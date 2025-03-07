@@ -50,9 +50,15 @@ resource "proxmox_virtual_environment_vm" "k8s-cp-vms-cl01" {
         gateway = "10.160.1.1"
       }
     }
+    user_account {
+      username = "ubuntu"
+      password = trimspace("letmein")
+      keys     = [trimspace("ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINhQWkgjI0SC99fxM0WPtjVgHH1K8r+s5sYdCLLavlfr Medusa Dell Wyse Legito Workstation")]
+    }
+
     datastore_id = "local-btrfs-vms"
 
-    user_data_file_id = proxmox_virtual_environment_file.ubuntu_cloud_init.id
+    # user_data_file_id = proxmox_virtual_environment_file.ubuntu_cloud_init.id
   }
 
   network_device {
@@ -126,9 +132,15 @@ resource "proxmox_virtual_environment_vm" "k8s-worker-vms-cl01" {
         gateway = "10.160.1.1"
       }
     }
+    user_account {
+      username = "ubuntu"
+      password = trimspace("letmein")
+      keys     = [trimspace("ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINhQWkgjI0SC99fxM0WPtjVgHH1K8r+s5sYdCLLavlfr Medusa Dell Wyse Legito Workstation")]
+    }
+
     datastore_id = "local-btrfs-vms"
 
-    user_data_file_id = proxmox_virtual_environment_file.ubuntu_cloud_init.id
+    # user_data_file_id = proxmox_virtual_environment_file.ubuntu_cloud_init.id
   }
 
   network_device {
