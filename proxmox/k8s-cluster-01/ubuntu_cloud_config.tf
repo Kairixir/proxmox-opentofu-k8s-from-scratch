@@ -1,6 +1,6 @@
 resource "proxmox_virtual_environment_file" "ubuntu_cloud_init" {
   content_type = "snippets"
-  datastore_id = "local-btrfs-vms"
+  datastore_id = "local"
   node_name    = "medusa"
 
   source_raw {
