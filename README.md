@@ -22,3 +22,6 @@ Learning to setup k8s using proxmox and opentofu form scratch
 # Future reference
 ## ArgoCD
 - <https://blog.andreasm.io/2024/02/04/argo-cd-vsphere-with-tanzu/>
+
+## k3s with cilium
+- <https://blog.stonegarden.dev/articles/2024/02/bootstrapping-k3s-with-cilium/>
