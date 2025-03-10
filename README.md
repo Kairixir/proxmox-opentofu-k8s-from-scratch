@@ -4,6 +4,8 @@ Learning to setup k8s using proxmox and opentofu form scratch
 
 # Guidance
 
+## Kubernetes the hard way
+
 - <https://github.com/kelseyhightower/kubernetes-the-hard-way/tree/master>
 - <https://github.com/DushanthaS/kubernetes-the-hard-way-on-proxmox/tree/master>
 
@@ -15,3 +17,8 @@ Learning to setup k8s using proxmox and opentofu form scratch
 
 - <https://blog.stonegarden.dev/articles/2024/03/proxmox-k8s-with-cilium/>
 - <https://blog.stonegarden.dev/articles/2024/08/talos-proxmox-tofu/#overview>
+
+
+# Future reference
+## ArgoCD
+- <https://blog.andreasm.io/2024/02/04/argo-cd-vsphere-with-tanzu/>
